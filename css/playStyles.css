@@ -1,0 +1,348 @@
+
+body {
+    margin: 0;
+    font-family: "Rubik Doodle Shadow";
+    font-size: 18px;
+    font-variation-settings:
+      "MORF" 34,
+      "SHLN" 100;
+    background: linear-gradient(45deg, #3142a7, #dd7d57, #303068, #dd7d57); /* Colores del gradiente */
+    background-size: 200% 200%; /* Tamaño del gradiente */
+    animation: gradientAnimation 10s ease infinite; /* Animación del gradiente */
+    
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.search-container {
+    padding: 20px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+
+}
+.list-container {
+    padding: 20px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+
+}
+#searchBuscar{
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 15px;
+    background-color: #ccc;
+}
+
+.scroll-box {
+    width: 25vw;
+    height: 30vh;
+    overflow-y: auto; /* Cambiado de scroll a auto para que el scroll aparezca solo cuando sea necesario */
+    border: 1px solid #36367a;
+    padding: 5px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    gap: 10px;
+    background-color: #ccc;
+    border-radius: 5px;
+    font-family: "Lilita One", sans-serif;
+    color: #36367a;
+    font-size: 15px;
+    overflow-x: auto;
+}
+
+/* Estilos para el scroll */
+.scroll-box::-webkit-scrollbar {
+    width: 2px;
+    height: 5px;
+}
+.scroll-box::-webkit-scrollbar-track {
+    background: transparent;
+}
+.scroll-box::-webkit-scrollbar-thumb {
+    background: #36367a; /* Color del thumb */
+    border-radius: 10%; /* Borde del thumb */
+}
+.search-input {
+    width: 100%;
+    padding: 10px;
+    font-family: "Lilita One", sans-serif;
+    color: #36367a;
+    border-color: transparent;
+}
+
+.details-container {
+    padding: 30px;
+    padding-bottom: 0;
+    text-align: center;
+    position: relative;
+
+}
+.playerSquareMargin{
+    background-color: #484874;
+    border-radius: 15px;
+    padding: 15px;
+}
+.playerSquare{
+    background-color: #ccc;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.searchInputButton {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+}
+
+
+
+.search-music {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.search-music button {
+    background-color: #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #3142a7;
+    color: #134b80;
+    font-family: "Lilita One", sans-serif;
+    font-size: 17px;
+}
+
+.music-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.music-controls button {
+    margin: 0 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color:#484874;
+    border-width: 2px;
+    border-radius: 50%;
+    border-color: #ffffff;
+    color: #ccc;
+}
+.music-controls button:hover{
+    background-color: linear-gradient(45deg, #3142a7, #111111, #18185a, #7e5416);
+    border-color: #484874;
+    color: #ffffff;
+}
+
+.music-controls img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#mute{
+    margin: 0 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border-color: transparent;
+    color: aliceblue;
+    position: absolute;
+    top: 320px; /* Ajusta según sea necesario */
+    right: 100px; /* Ajusta según sea necesario */
+    z-index: 999;
+}
+
+
+.title {
+    width: 26vw;
+    grid-column: span 4;
+    /* Ocupa todas las columnas disponibles */
+    text-align: left;
+    background-color: #484874;
+}
+.title_res {
+    text-align: left;
+    background-color: transparent;
+}
+
+.titlesBox {
+    color: #36367a;
+    border: 1px solid #36367a;
+    background-color: #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: "Lilita One", sans-serif;
+    margin: 10px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.column {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+}
+.column > * {
+    justify-self: center; /* Centrar horizontalmente */
+    align-self: center; /* Centrar verticalmente */
+}
+
+
+.icon {
+    font-size: 24px;
+}
+
+.playsong, .favorites, .addplaylist , .removeplaylist{
+    cursor: pointer;
+}
+.information-box {
+    max-width: 200px; 
+    margin: 0 auto; 
+    text-align: left; 
+}
+.songTitle{
+    text-align: center;
+    font-size: 22px;
+    font-weight: bolder;
+    color: #303068;
+    margin-top: auto;
+    margin-bottom: 8px;
+}
+.songTitle1{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #303068;
+    margin-top: auto;
+    margin-bottom: 8px;
+}
+.detailTit{
+    font-family: "Lilita One", sans-serif;
+    font-size: 16px;
+    color: #36367a;
+
+}
+.detailTit1{
+    color: #c51852;
+    font-weight: bolder;
+}
+.top-bar{
+    display: grid;
+    grid-template-columns: 3fr 1fr 0.1fr;
+    background-color:#484874;
+    
+}
+.welcomeUser{
+    text-align: right;
+    padding-right: 15px;
+    color: #ffffff;
+}
+#cover{
+    border-radius: 100%;
+}
+.division-line {
+    border-top: 1px solid #36367a; 
+    margin: 0px; 
+}
+.img_list{
+    border-radius: 100%;
+}
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent; /* Fondo semi-transparente */
+    z-index: 999; /* Asegura que el modal esté por encima de todo */
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #c1c1c7f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+.close:hover {
+    color: red;
+}
+
+#openModalButton{
+    font-family: "Lilita One", sans-serif;
+    border: transparent;
+    border-radius: 15px;
+    background-color: #303068;
+    color: lavender;
+    cursor: pointer;
+}
+#msjInfo{
+    color: #ffffff;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+}
+#msjInfo h3{
+    display: flex;
+    align-items: center;
+    margin: 0px;
+}
+.playimg{
+    background-color:#c51852;
+    border-width: 2px;
+    border-radius: 50%;
+    border-color: #ffffff;
+    color: #ccc;
+    font-size: 40px;
+    margin: 5px;
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%; /* Posición inicial del gradiente */
+    }
+    50% {
+        background-position: 100% 50%; /* Posición intermedia del gradiente */
+    }
+    100% {
+        background-position: 0% 50%; /* Posición final del gradiente */
+    }
+}

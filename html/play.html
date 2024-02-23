@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Música</title>
+    <link rel="icon" href="../assets/icono/logo.png" type="image/png">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk:MORF,SHLN@14,100&family=Rubik+Doodle+Shadow&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Honk:MORF,SHLN@34,100&family=Lilita+One&family=Rubik+Doodle+Shadow&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/playStyles.css">
+
+    <script src="../src/main.js" defer></script>
+    <script src="../src/user.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Barra superior con el logo -->
+    <div class="top-bar">
+        <div>
+            <h3 style="color: aliceblue;display:flex; align-items: center; margin: 15px 0 15px 0;">
+                <img src="../assets/icono/logo.png" alt="Logo" width="25" height="25"
+                    style="padding-left: 15px; padding-right: 15px;">
+                Reproductor de música
+            </h3>
+        </div>
+        <!-- Espacio para mostrar el nombre de usuario -->
+        <div id="username-display" style="display:flex; align-items:center; justify-content: end;"></div>
+        <div style="display:flex; align-items:center; margin: 15px 0 15px 0;">
+            <img src="../assets/icono/user.png" alt="Logo" width="25" height="25"
+                style="padding-left: 5px; align-self: center; padding-right: 15px;">
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="search-container">
+            <div class="searchInputButton">
+                <div>
+                    <label for="search-input" style="color: aliceblue;">Buscador</label>
+                    <input id="searchBuscar" type="text" class="search-input" placeholder="Buscar...">
+                </div>
+                <div class="search-music">
+                    <button id="searchI" type="submit">Buscar</button>
+                </div>
+            </div>
+
+            <!-- RESULTADOS DEL BUSCADOR -->
+            <div class="title">
+                <p class="titlesBox">Mis Búsquedas</p>
+            </div>
+            <div id="searchResults" class="scroll-box" style="height: 52vh;">
+                
+            </div>
+
+        </div>
+        <!-- REPRODUCTOR -->
+        <div class="details-container">
+            <div id="msjInfo">
+                <h3>¡Click en <span class="material-symbols-outlined playimg">play_arrow</span> para empezar!</h3>
+            </div>
+            <div class="playerSquareMargin">
+                <div class="playerSquare">
+                    <img id="cover" src="../assets/portadas/portada.jpg" alt="Portada" width="280vh" height="280vh">
+                    <button id="mute"><span class="material-symbols-outlined"
+                            style="font-size: 30px;color: #484874;">volume_off</span></button>
+                    <div id="detailsSongs" class="details"></div>
+                    <div class="music-controls">
+                        <button id="pause"><span class="material-symbols-outlined"
+                                style="font-size: 20px;">pause</span></button>
+                        <button id="skipPrevious"><span class="material-symbols-outlined">skip_previous</span></button>
+                        <button id="play" ><span class="material-symbols-outlined"
+                                style="font-size: 45px; ">play_arrow</span></button>
+                        <button id="skipNext"><span class="material-symbols-outlined">skip_next</span></button>
+                        <button id="stop"><span class="material-symbols-outlined"
+                                style="font-size: 20px;">stop</span></button>
+    
+                    </div>
+                </div>
+    
+            </div>
+            
+        </div>
+
+        <div class="list-container">
+            <!-- MI PLAYLIST -->
+            <div class="title">
+                <p class="titlesBox">Mi Playlist</p>
+            </div>
+            <div id="resPlaylist" class="scroll-box">
+
+            </div>
+            <!-- FAVORITOS -->
+            <div class="title">
+                <p class="titlesBox">Favoritos</p>
+            </div>
+            <div id="resFavoritos" class="scroll-box"></div>
+        </div>
+    </div>
+    
+</body>
+
+</html>

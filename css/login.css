@@ -1,0 +1,59 @@
+body {
+    font-family: "Rubik Doodle Shadow";
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* contenedor abarque el 100% de la altura de la ventana */
+    font-size: 20px;
+    font-variation-settings:
+      "MORF" 34,
+      "SHLN" 100;
+      background: linear-gradient(45deg, #3142a7, #4e4863, #303068, #dd7d57); /* Colores del gradiente */
+    background-size: 400% 400%; /* Tamaño del gradiente */
+    animation: gradientAnimation 10s ease infinite; /* Animación del gradiente */
+}
+
+#login-form {
+    max-width: 300px;
+    background-color: rgba(255, 255, 255, 0.089);
+    padding: 20px;
+    border-radius: 5px;
+    
+    display: inline-block;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-family: "Lilita One", sans-serif;
+    color: #18185a;
+}
+#login-form label{
+    color: aliceblue;
+}
+
+button {
+    background-color: #7e500a;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-family: "Rubik Doodle Shadow";
+    font-size: 20px;
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%; /* Posición inicial del gradiente */
+    }
+    50% {
+        background-position: 100% 50%; /* Posición intermedia del gradiente */
+    }
+    100% {
+        background-position: 0% 50%; /* Posición final del gradiente */
+    }
+}

@@ -2,7 +2,7 @@
 Proyecto HTML, CSS, JavaScript
 ## ESTUDIANTE: Diana Katherine Almeida Anchatuña
 
-##Credenciales para ingresar:
+## Credenciales para ingresar:
 correousuario1@gmail.com   =>   contraseña1
 correousuario2@gmail.com   =>   contraseña2
 

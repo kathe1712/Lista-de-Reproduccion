@@ -4,6 +4,7 @@ Proyecto HTML, CSS, JavaScript
 
 ## Credenciales para ingresar:
 correousuario1@gmail.com   =>   contraseña1
+
 correousuario2@gmail.com   =>   contraseña2
 
 ## Vista previa
